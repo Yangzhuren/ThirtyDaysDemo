@@ -22,7 +22,7 @@ const day10 = require('../../images/HXBANK_10.png')
 
 const data = [
   { icon: day1, title: 'day1', onPress: () => { Routers.day1() } },
-  { icon: day2, title: 'day2', onPress: () => {} },
+  { icon: day2, title: 'day2', onPress: () => { Routers.animation() } },
   { icon: day3, title: 'day3', onPress: () => {} },
   { icon: day4, title: 'day4', onPress: () => {} },
   { icon: day5, title: 'day5', onPress: () => {} },

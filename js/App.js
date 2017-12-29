@@ -5,7 +5,7 @@
  * @flow
  */
 import React from 'react'
-import { Platform } from 'react-native'
+import { Platform, Picker } from 'react-native'
 import { Stack, Scene, Router } from 'react-native-router-flux'
 import EStyleSheet from 'react-native-extended-stylesheet'
 import dva from 'dva-no-router'
@@ -14,6 +14,7 @@ import { registerModels } from './models'
 import Theme from './theme'
 import Home from './pages/home'
 import Day1 from './pages/day1'
+import Animation from './pages/animation'
 
 EStyleSheet.build(Theme)
 
@@ -38,6 +39,7 @@ const Root = () => (
     <Stack key='root'>
       {_renderMainTabs()}
       <Scene key='day1' component={Day1} title='Day1' />
+      <Scene key='animation' component={Animation} title='Animation' />
     </Stack>
   </Router>
 )
