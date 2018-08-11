@@ -15,6 +15,7 @@ import Theme from './theme'
 import Home from './pages/home'
 import Day1 from './pages/day1'
 import Animation from './pages/animation'
+import Day3 from './pages/day3'
 
 EStyleSheet.build(Theme)
 
@@ -40,6 +41,7 @@ const Root = () => (
       {_renderMainTabs()}
       <Scene key='day1' component={Day1} title='Day1' />
       <Scene key='animation' component={Animation} title='Animation' />
+      <Scene key='dataBasePage' component={Day3} title='Data Base' />
     </Stack>
   </Router>
 )

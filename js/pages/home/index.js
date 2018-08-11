@@ -23,7 +23,7 @@ const day10 = require('../../images/HXBANK_10.png')
 const data = [
   { icon: day1, title: 'day1', onPress: () => { Routers.day1() } },
   { icon: day2, title: 'day2', onPress: () => { Routers.animation() } },
-  { icon: day3, title: 'day3', onPress: () => {} },
+  { icon: day3, title: 'day3', onPress: () => { Routers.dataBasePage() } },
   { icon: day4, title: 'day4', onPress: () => {} },
   { icon: day5, title: 'day5', onPress: () => {} },
   { icon: day6, title: 'day6', onPress: () => {} },
@@ -41,16 +41,18 @@ class Home extends React.Component {
           data={data}
           keyExtractor={(item, index) => `item_${index}`}
           renderItem={(item) => {
-          return (
-            <TouchableOpacity
-              style={styles.itemContainer}
-              onPress={item.item.onPress}
-            >
-              <Image style={styles.icon} source={item.item.icon} />
-              <Text>{item.item.title}</Text>
-            </TouchableOpacity>
-          )
-        }}
+            return (
+              <TouchableOpacity
+                style={styles.itemContainer}
+                onPress={item.item.onPress}
+              >
+                <Image style={styles.icon} source={item.item.icon} />
+                <Text>
+                  {item.item.title}
+                </Text>
+              </TouchableOpacity>
+            )
+          }}
           numColumns={4}
         />
       </View>
