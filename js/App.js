@@ -16,13 +16,14 @@ import Home from './pages/home'
 import Day1 from './pages/day1'
 import Animation from './pages/animation'
 import Day3 from './pages/day3'
+import Day4 from './pages/day4'
 
 EStyleSheet.build(Theme)
 
 const _renderMainTabs = () => (
   Platform.select({
     ios: (
-      <Scene tabs key='native'>
+      <Scene tabs key='native' hideNavBar>
         <Scene key='home' component={Home} title='Home' />
         <Scene key='work' component={Home} title='Work' />
         <Scene key='mine' component={Home} title='Mine' />
@@ -42,6 +43,7 @@ const Root = () => (
       <Scene key='day1' component={Day1} title='Day1' />
       <Scene key='animation' component={Animation} title='Animation' />
       <Scene key='dataBasePage' component={Day3} title='Data Base' />
+      <Scene key='anim' component={Day4} title='Animation' />
     </Stack>
   </Router>
 )

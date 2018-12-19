@@ -4,6 +4,7 @@ import {
   Image,
   Text,
   FlatList,
+  Dimensions,
   TouchableOpacity,
 } from 'react-native'
 import { Actions as Routers } from 'react-native-router-flux'
@@ -24,7 +25,7 @@ const data = [
   { icon: day1, title: 'day1', onPress: () => { Routers.day1() } },
   { icon: day2, title: 'day2', onPress: () => { Routers.animation() } },
   { icon: day3, title: 'day3', onPress: () => { Routers.dataBasePage() } },
-  { icon: day4, title: 'day4', onPress: () => {} },
+  { icon: day4, title: 'day4', onPress: () => { Routers.anim() } },
   { icon: day5, title: 'day5', onPress: () => {} },
   { icon: day6, title: 'day6', onPress: () => {} },
   { icon: day7, title: 'day7', onPress: () => {} },
@@ -38,6 +39,7 @@ class Home extends React.Component {
     return (
       <View style={styles.container}>
         <FlatList
+          columnWrapperStyle={{ width: Dimensions.get('window').width, justifyContent: 'space-around' }}
           data={data}
           keyExtractor={(item, index) => `item_${index}`}
           renderItem={(item) => {
